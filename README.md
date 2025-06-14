@@ -105,23 +105,6 @@
 
 ---
 
-## Зависимости (requirements.txt)
-
-```
-flask
-sqlite3
-torch
-transformers
-pandas
-matplotlib
-seaborn
-nltk
-scikit-learn
-ipython
-```
-
----
-
 ## Лицензия
 
 Проект распространяется по лицензии MIT. См. файл [LICENSE](./LICENSE).
