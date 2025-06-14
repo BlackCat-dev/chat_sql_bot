@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Чат-Бот УрФУ</title>
+    <link rel="stylesheet" href="/static/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <div class="logo-container">
+            <img src="/static/img/Logo.png" alt="УрФУ" class="logo">
+            <span class="logo-text">Уральский федеральный университет</span>
+        </div>
+    </header>
+    <main class="main-content">
+        <div class="chat-container">
+            <h1>Интеллектуальный помощник УрФУ</h1>
+            <form method="post" class="chat-form">
+                <input type="text" name="query" placeholder="Введите текст запроса на русском языке..." required>
+                <button type="submit">Отправить</button>
+            </form>
+            {% if encouragement %}
+                <div class="encouragement-message">
+                    <p>{{ encouragement }}</p>
+                </div>
+            {% endif %}
+            {% if response %}
+            <div class="table-container">
+                <table>
+                    <thead>
+                        <tr>
+                            {% for col in columns %}
+                            <th>{{ col }}</th>
+                            {% endfor %}
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for row in response %}
+                        <tr>
+                            {% for col in row %}
+                            <td>{{ col }}</td>
+                            {% endfor %}
+                        </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+            {% endif %}
+        </div>
+    </main>
+    <footer class="footer">
+        <p>© {{ year }} УрФУ. Все права защищены.</p>
+    </footer>
+</body>
+</html>
