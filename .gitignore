@@ -1,0 +1,24 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.env
+.venv
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+
+# Jupyter/IPython
+.ipynb_checkpoints
+
+# Model/data/logs
+data/model_t5_sql/
+data/database.db
+logs/
+*.csv
+
+# VSCode
+.vscode/
